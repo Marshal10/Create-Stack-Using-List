@@ -32,6 +32,10 @@ class Stack:
             return "The stack is empty"
         return self.list.pop()
         
+    def peek(self):
+        if self.isEmpty():
+            return "The stack is empty"
+        return self.list[-1]
     
 customStack=Stack(4)
 print(customStack)
@@ -39,5 +43,4 @@ customStack.push(4)
 customStack.push(3)
 customStack.push(2)
 print(customStack)
-print(customStack.pop())
-print(customStack)
+print(customStack.peek())

@@ -5,12 +5,10 @@ class Stack:
         
     def __str__(self):
         if self.list:
-            self.list.reverse()
-            values=[str(value) for value in self.list]
+            values=[str(value) for value in self.list[::-1]]
             return '\n'.join(values)
-        else:
-            return "The stack is empty"
-    
+        return "The stack is empty"
+
     def isEmpty(self):
         if self.list==[]:
             return True
@@ -29,8 +27,17 @@ class Stack:
         self.list.append(value)
         return "An element has been added successfully"
     
+    def pop(self):
+        if self.isEmpty():
+            return "The stack is empty"
+        return self.list.pop()
+        
+    
 customStack=Stack(4)
+print(customStack)
 customStack.push(4)
 customStack.push(3)
 customStack.push(2)
+print(customStack)
+print(customStack.pop())
 print(customStack)

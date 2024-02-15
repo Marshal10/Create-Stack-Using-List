@@ -37,10 +37,14 @@ class Stack:
             return "The stack is empty"
         return self.list[-1]
     
+    def deleteStack(self):
+        self.list=None
+        return "All the elements are deleted"
+    
 customStack=Stack(4)
-print(customStack)
 customStack.push(4)
 customStack.push(3)
 customStack.push(2)
 print(customStack)
-print(customStack.peek())
+print(customStack.deleteStack())
+print(customStack)

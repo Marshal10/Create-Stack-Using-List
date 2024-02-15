@@ -10,5 +10,16 @@ class Stack:
         else:
             return "The stack is empty"
     
+    def isEmpty(self):
+        if self.list==[]:
+            return True
+        else:
+            return False
+
+    def isFull(self):
+        if len(self.list)==self.maxSize:
+            return True
+        else:
+            return False
 customStack=Stack(4)
-print(customStack)
+print(customStack.isFull())

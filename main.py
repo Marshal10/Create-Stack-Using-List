@@ -5,7 +5,8 @@ class Stack:
         
     def __str__(self):
         if self.list:
-            values=[str(el) for el in self.list.reverse()]
+            self.list.reverse()
+            values=[str(value) for value in self.list]
             return '\n'.join(values)
         else:
             return "The stack is empty"
@@ -21,5 +22,15 @@ class Stack:
             return True
         else:
             return False
+        
+    def push(self,value):
+        if self.isFull():
+            return "The stack is full"
+        self.list.append(value)
+        return "An element has been added successfully"
+    
 customStack=Stack(4)
-print(customStack.isFull())
+customStack.push(4)
+customStack.push(3)
+customStack.push(2)
+print(customStack)
